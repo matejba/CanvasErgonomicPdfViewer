@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="sbid"
+           constructor="CanvasErgonomicPdfViewer"
+           version="3.1.0"
+           display-name-key="CanvasErgonomicPdfViewer"
+           description-key="Ergonomic PDF viewer for Canvas apps"
+           control-type="standard">
+
+    <external-service-usage enabled="false" />
+
+    <!-- INPUTS -->
+    <!-- DataUri: "data:application/octet-stream;base64,JVBERi0x..." (nebo application/pdf) -->
+    <property name="pdfDataUri"
+              display-name-key="PDF DataUri"
+              description-key="PDF as DataUri (data:*;base64,...)"
+              of-type="SingleLine.Text"
+              usage="input"
+              required="true" />
+
+    <!-- 1 = toolbar visible -->
+    <property name="showToolbar"
+              display-name-key="Show toolbar"
+              description-key="Show minimal toolbar"
+              of-type="TwoOptions"
+              usage="input"
+              required="false" />
+
+    <!-- Zoom config -->
+    <property name="minZoom"
+              display-name-key="Min zoom"
+              description-key="Minimum zoom (e.g. 0.5)"
+              of-type="Decimal"
+              usage="input"
+              required="false" />
+
+    <property name="maxZoom"
+              display-name-key="Max zoom"
+              description-key="Maximum zoom (e.g. 3.0)"
+              of-type="Decimal"
+              usage="input"
+              required="false" />
+
+    <property name="zoomStep"
+              display-name-key="Zoom step"
+              description-key="Zoom step for wheel/keys (e.g. 0.1)"
+              of-type="Decimal"
+              usage="input"
+              required="false" />
+
+    <!-- Behavior -->
+    <!-- Behavior -->
+    <property name="resetToFitOnSourceChange"
+              display-name-key="Reset on source change"
+              description-key="On new PDF: reset to fit width and scroll to top"
+              of-type="TwoOptions"
+              usage="input"
+              required="false" />
+
+    <!-- Fit Button Customization -->
+    <property name="fitButtonText"
+              display-name-key="Fit button text"
+              description-key="Text displayed on the Fit button (default: Fit)"
+              of-type="SingleLine.Text"
+              usage="input"
+              required="false" />
+
+    <property name="fitButtonWidth"
+              display-name-key="Fit button width"
+              description-key="Width of the Fit button in pixels (default: auto)"
+              of-type="Whole.None"
+              usage="input"
+              required="false" />
+
+    <resources>
+      <code path="index.ts" order="1"/>
+    </resources>
+
+  </control>
+</manifest>

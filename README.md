@@ -14,7 +14,7 @@ A Power Apps Component Framework (PCF) control for viewing PDF documents in Canv
 
 | Property | Type | Description |
 |----------|------|-------------|
-| `pdfDataUri` | Text | PDF as base64 DataUri (required) |
+| `pdfDataUri` | Text | PDF file as base64 string (required) |
 | `showToolbar` | Boolean | Show/hide toolbar |
 | `minZoom` | Decimal | Minimum zoom level (default: 0.5) |
 | `maxZoom` | Decimal | Maximum zoom level (default: 3.0) |
